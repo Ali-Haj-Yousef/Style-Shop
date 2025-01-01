@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat-Regular.woff2) format('woff2'),
+    url(fonts/Montserrat-Bold.woff) format('woff');
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Montserrat;
+    color: white;
+    overflow-y:hidden;
+}
+.background {
+    background-image: url("./images/background.jpg");
+    /* Full height */
+    /* Center and scale the image nicely */
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.4); /* Adjust the value between 0 and 1 */
+}
+.nav-bar1 {
+    position: fixed;
+    left:0;
+    right:0;
+    top: 0;
+    height: 70px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    z-index: 100;
+}
+.nav-bar-buttons-container1 {
+    margin-top: 10px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Montserrat;
+}
+.nav-bar-buttons{
+    background: none;
+    border: none;
+    color: white;
+    transition: border 0.15s;
+    margin-left: 30px;
+    font-size: 17px;
+    transition: color 0.15s;
+    font-family: Montserrat;
+    text-decoration: none;
+}
+.nav-bar-buttons:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.808);
+}
+.welcome-container {
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    top: 260px;
+    bottom: 250px;
+    right: 50px;
+    left: 680px;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+}
+
+.signup-container {
+    top: 20%;
+    bottom: 20%;
+}
+
+.login-container {
+    top: 26%;
+    bottom: 26%;
+}
+
+.signup-container,
+.login-container {
+    position: fixed;
+    right: 10%;
+    width: 25%;
+    background-color: rgba(41, 51, 92,0.5);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.item {
+    width: 100%;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.tag {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+input {
+    font-family: Montserrat;
+    font-size: 16px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(225, 225, 225);
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 100%;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.signup-button {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Montserrat;
+    font-size: 16px;
+    margin-top: 5px;
+    background-color: #F3A712;
+    margin-bottom: 16px;
+}
+.signup-button:hover {
+    cursor: pointer;
+}
+.login-button:hover {
+    background-color: #ffaa00;
+}
+a {
+    color: #F3A712;
+}
+.error-message {
+    color: #F3A712;
+    font-size: 16px;
+    font-family: Montserrat;
+    margin-bottom: 10px;
+}
+.style-button,
+.disabled-style-button {
+    font-size: 19px;
+    padding: 5px;
+    width: 150px;
+    height: 90px;
+}
+.decide-button {
+    font-size: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.create-button,
+.disabled-create-button {
+    font-size: 19px;
+    padding: 12px;
+}
+.decide-button,
+.style-button,
+.create-button {
+    background-color: #F3A712;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: Montserrat;
+    transition: background-color 0.15s;
+    cursor: pointer;
+}
+.disabled-style-button,
+.disabled-create-button {
+    background-color: #F3A712;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: Montserrat;
+    pointer-events: none;
+    opacity: 0.6; /* Optional: To visually indicate that the button is disabled */
+    cursor: not-allowed;
+}
+.decide-button:hover {
+    background-color: #fac251;
+}
+.style-button:hover {
+    background-color: #fac251;
+}
+.create-button:hover {
+    background-color: #fac251;
+}
+.decide-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    margin-top: 60px;
+}
+.text-container {
+    font-size: 23px;
+    margin-top: 60px;
+}
+
+.info-container {
+    position: fixed;
+    top: 20%;
+    bottom: 15%;
+    left: 350px;
+    right: 350px;
+    background-color: rgba(41, 51, 92,0.5);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.plus-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 50px;
+}
+.create-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+.blurred-container {
+    background-color: rgba(0,0,0,0.95);
+}
+.unclear-container {
+    background-color: rgba(0,0,0,0.8);
+}
+.blurred-container,
+.unclear-container {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+.displaying-offer-container {
+    top: 280px;
+    bottom: 230px;
+    right: 440px;
+    left: 440px;
+}
+.displaying-offer-container,
+.displaying-style-container {
+    background-color: white;
+    position: fixed;
+    font-size: 17px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.disclaimer-title {
+    width:400px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+.exit2-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    background: none;
+}
+.exit2-icon {
+    width: 200%;
+    height: 200%;
+}
+.card-number-field {
+    border: none;
+    border-radius: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    width: 350px;
+    background-color: rgb(210, 210, 210);
+    margin-top: 10px;
+    text-align: center;
+}
+.buy-button {
+    margin-right: 10px;
+    background-color: #F3A712;
+    border: none;
+    border-radius: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
+}
+.buy-button:hover {
+    opacity: 0.85;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+.purchase-button-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-top: 20px;
+}

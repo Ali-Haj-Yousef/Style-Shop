@@ -1,0 +1,9 @@
+# Ignore Jekyll files
+	_site/
+	_config.yml
+	_posts/
+	_layouts/
+	_includes/
+	_sass/t
+	.jekyll-cache/
+	.jekyll-metadata
